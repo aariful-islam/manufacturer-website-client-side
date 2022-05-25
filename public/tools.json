@@ -1,0 +1,38 @@
+[
+    {
+      
+      "name": "THeadLight",
+      "img" : "https://img.freepik.com/free-photo/headlight-lamp-car_74190-4985.jpg?w=996&t=st=1653471143~exp=1653471743~hmac=50e9a579b7a60b617d7e4d3772b91f87baa5817133b496abe9a40467023ce60d",
+      "description":"A headlamp is a lamp attached to the front of a vehicle to illuminate the road ahead",
+      "minorder":"100",
+      "available":"1000",
+      "price":"120"
+
+
+    },
+    {
+        "name": "Car hood",
+        "img" : "https://www.uneedapart.com/images/parts/used-hoods.jpg",
+        "description":"A car hood, also referred to as a bonnet in some other countries, is the hinged cover that rests over the engine of a front-engine vehicle",
+        "minorder":"120",
+        "available":"1000",
+        "price":"150"
+    },
+    {
+        "name": "Car mirror",
+        "img" : "https://images.unsplash.com/photo-1571510941682-1bf6acb34baa?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170",
+        "description":"A side-view mirror (or side mirror)",
+        "minorder":"80",
+        "available":"1000",
+        "price":"220"
+    },
+    {
+        "name": "Car Fender",
+        "img" : "https://5.imimg.com/data5/EY/UJ/MY-23761876/car-fender-500x500.jpg",
+        "description":"Most modern vehicles have fenders on their front wheels. When you get into a minor car accident, you can call it a fender bender, and it's possible that your fenders did get slightly dented.",
+        "minorder":"120",
+        "available":"1000",
+        "price":"250"
+    }
+    
+  ]

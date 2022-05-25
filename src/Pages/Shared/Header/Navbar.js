@@ -66,7 +66,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link as={Link} to="/home" class="btn btn-ghost normal-case text-xl">
-            Car parts manufacturer
+            Car Engineer
           </Link>
         </div>
         <div class="navbar-center hidden lg:flex">

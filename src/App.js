@@ -3,6 +3,8 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Login from './Pages/LogIn/LogIn/LogIn';
 import Registration from './Pages/LogIn/Registration/Registration';
+import RequireAuth from './Pages/LogIn/RequireAuth';
+import Purchage from './Pages/Purchage/Purchage';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navbar from './Pages/Shared/Header/Navbar';
 
@@ -14,6 +16,13 @@ function App() {
      <Routes>
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/home' element={<Home></Home>}></Route>
+       <Route path='/purchage/:purchageId'
+       element={
+         <RequireAuth>
+           <Purchage></Purchage>
+         </RequireAuth>
+       }
+       ></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/registration' element={<Registration></Registration>}></Route>
      </Routes>

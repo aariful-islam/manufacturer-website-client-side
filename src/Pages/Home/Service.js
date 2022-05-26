@@ -10,7 +10,7 @@ const Service = () => {
                     <div>
                         <h1 class="text-5xl font-bold">Get services from expert</h1>
                         <p class="py-6 m-2">
-                            We not only a car parts manufacturer but also we provide any kind of car servicing. We have more than 20 car service experts, who can repair any kinds of car related issue. Our experts are get trained from japan. So if you face any kind of car issue then just contact with us ,we will provide our best service for you within a cheap cost.
+                            We not only a car tools manufacturer but also we provide any kind of car servicing. We have more than 20 car service experts, who can repair any kinds of car related issue. Our experts are get trained from japan. So if you face any kind of car issue then just contact with us ,we will provide our best service for you within a cheap cost.
                            
                         </p>
                         

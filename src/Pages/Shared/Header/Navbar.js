@@ -89,6 +89,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              
               <Link as={Link} to="/dashboard">
                 Dashboard
               </Link>
@@ -102,7 +103,15 @@ const Navbar = () => {
         </div>
         <div class="navbar-end">
             <ul>
-            <li>{user ? <button className="btn btn-primary" onClick={logout} >Sign Out</button> : <Link className="btn btn-primary" to="/login">Login</Link>}</li>
+            <li>{user ? (
+              <li>
+              
+              <Link as={Link} to="/dashboard">
+                Dashboard
+              </Link>
+            </li> ,
+            <button className="btn btn-primary" onClick={logout} >Sign Out</button> 
+            ) : <Link className="btn btn-primary" to="/login">Login</Link>}</li>
 
             </ul>
             

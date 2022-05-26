@@ -76,7 +76,7 @@ const Addtools = () => {
                             </label>
                             <input
                                 type="text"
-                                placeholder="Parts Name"
+                                placeholder="tools Name"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("name", {
                                     required: {
@@ -96,7 +96,7 @@ const Addtools = () => {
                             </label>
                             <textarea
                                 type="text"
-                                placeholder="Parts Description"
+                                placeholder="tools Description"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("description", {
                                     required: {
@@ -119,12 +119,12 @@ const Addtools = () => {
                             </label>
                             <input
                                 type="number"
-                                placeholder="Parts Quantity"
+                                placeholder="tools Quantity"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("available", {
                                     required: {
                                         value: true,
-                                        message: 'Parts Quantity is Required'
+                                        message: 'tools Quantity is Required'
                                     }
                                 })}
                             />
@@ -139,12 +139,12 @@ const Addtools = () => {
                             </label>
                             <input
                                 type="number"
-                                placeholder="Minimum Parts Order Quantity"
+                                placeholder="Minimum tools Order Quantity"
                                 className="input input-bordered w-full max-w-xs"
                                 {...register("minorder", {
                                     required: {
                                         value: true,
-                                        message: 'Parts Quantity is Required'
+                                        message: 'tools Quantity is Required'
                                     }
                                 })}
                             />

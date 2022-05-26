@@ -10,8 +10,8 @@ const Banner = () => {
                     <div>
                         <h1 class="text-5xl font-bold">Car Engineer Bangladesh</h1>
                         <p class="py-6 m-2">
-                            Welcome to car engineer Bangladesh. We are ready to serve you any kind of car parts. You can get the authentic product from us.
-                            We provide cheap and best services. We import car parts from japan. So you can get the best parts from us.
+                            Welcome to car engineer Bangladesh. We are ready to serve you any kind of car tools. You can get the authentic product from us.
+                            We provide cheap and best services. We import car tools from japan. So you can get the best tools from us.
                         </p>
                         
                     </div>

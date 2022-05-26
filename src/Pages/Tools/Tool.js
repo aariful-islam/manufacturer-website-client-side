@@ -15,7 +15,7 @@ const Tool = ({tool}) => {
           <h2 class="card-title">{name}</h2>
           <p>{description}</p>
           <div className='text-xl'>
-          <p>MIn order: <span className='font-bold'> {minorder}</span></p>
+          <p>Min order: <span className='font-bold'> {minorder}</span></p>
           <p>Available tools: <span className='font-bold'>{available}</span> </p>
           <p> Price :$ <span className='font-bold'>{price}</span></p>
 

@@ -43,7 +43,7 @@ const Navbar = () => {
               </li>
 
               <li>
-                <Link as={Link} to="/about">
+                <Link as={Link} to="/portfolio">
                   Portfolio
                 </Link>
               </li>
@@ -55,7 +55,7 @@ const Navbar = () => {
               </li>
               
               <li>
-                <Link as={Link} to="/about">
+                <Link as={Link} to="/contact">
                   Contact us
                 </Link>
               </li>
@@ -65,7 +65,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link as={Link} to="/portfolio">
+                <Link as={Link} to="/login">
                   Login
                 </Link>
               </li>
@@ -83,11 +83,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li>
-              <Link as={Link} to="/about">
-                Portfolio
-              </Link>
-            </li>
+            
             <li>
               <Link as={Link} to="/blogs">
                 Blogs

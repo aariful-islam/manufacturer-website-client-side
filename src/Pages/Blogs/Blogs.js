@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='ml-12'>
+        <div className='ml-12 m-8'>
             <h1 className='text-xl font-bold'>How will you improve the performance of a React Application?</h1>
             <p>Answer: There are lots of ways to improve the performance of react applicaton. <br />
                 Here I'm describe some ways:

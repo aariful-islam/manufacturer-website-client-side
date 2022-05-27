@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Blogs from './Blogs/Blogs';
+import Blogs from './Pages/Blogs/Blogs';
 
 import Addtools from './Pages/Dashboard/Addtools';
 import Dashboard from './Pages/Dashboard/Dashboard';
@@ -11,6 +11,7 @@ import Home from './Pages/Home/Home';
 import Login from './Pages/LogIn/LogIn/LogIn';
 import Registration from './Pages/LogIn/Registration/Registration';
 import RequireAuth from './Pages/LogIn/RequireAuth';
+import Portfolio from './Pages/Portfolio/Portfolio';
 import Purchage from './Pages/Purchage/Purchage';
 import Footer from './Pages/Shared/Footer/Footer';
 import Navbar from './Pages/Shared/Header/Navbar';
@@ -44,6 +45,7 @@ function App() {
            <Route path='/dashboard/addtools' element={<Addtools></Addtools>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
       </Routes>

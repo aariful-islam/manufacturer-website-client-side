@@ -49,6 +49,12 @@ const Navbar = () => {
               </li>
               
               <li>
+                <Link as={Link} to="/blogs">
+                  Blogs
+                </Link>
+              </li>
+              
+              <li>
                 <Link as={Link} to="/about">
                   Contact us
                 </Link>
@@ -77,6 +83,16 @@ const Navbar = () => {
               </Link>
             </li>
 
+            <li>
+              <Link as={Link} to="/about">
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link as={Link} to="/blogs">
+                Blogs
+              </Link>
+            </li>
             <li>
               <Link as={Link} to="/about">
                 Portfolio

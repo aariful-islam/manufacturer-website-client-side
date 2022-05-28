@@ -8,6 +8,34 @@ const ManageTools = () => {
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
+
+
+     
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:4000/tools/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                 
+                    const remaining = tools.filter(tool => tool._id !== id);
+                    setTools(remaining);
+
+                   
+                   
+                })
+        }
+        
+    }
+
+
+
+
     return (
         <div>
             <p className='text-3xl text-center'>Our Tools</p>
@@ -27,7 +55,7 @@ const ManageTools = () => {
                         </thead>
                         <tbody>
                             {
-                                tools.slice(0, 6).map(tool =>
+                                tools.map(tool =>
                                     <tr>
 
                                         <td>{tool.name}</td>
@@ -35,7 +63,7 @@ const ManageTools = () => {
                                         <td>{tool.availableQuantity}</td>
                                         <td>{tool.price}</td>
                                         <td>
-                                            <button className='btn btn-primary'>Delete</button></td>
+                                            <button onClick={() => handleDelete(tool._id)} className='btn btn-primary'>Delete</button></td>
                                     </tr>)
 
                             }

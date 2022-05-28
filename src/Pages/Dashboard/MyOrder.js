@@ -35,16 +35,19 @@ const MyOrder = () => {
                             <th>Tools</th>
                             <th>Total Price</th>
                             <th>quantity</th>
+                            <th>status</th>
+                            <th>Remove order</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             orders.map(order=> <tr>
                                 <td></td>
-                                <td>{orders.email}</td>
-                                <td>ghsg</td>
-                                <td>Blue</td>
-                                <td><button>delete</button></td>
+                                <td>{order.email}</td>
+                                <td>{order.quantity}</td>
+                                <td>{order.totalPrice}</td>
+                                <td>{order.status}</td>
+                                <td><button className='btn btn-primary'>delete</button></td>
                             </tr>)
                         }
                         

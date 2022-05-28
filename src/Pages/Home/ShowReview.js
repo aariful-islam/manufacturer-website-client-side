@@ -7,10 +7,11 @@ const ShowReview = () => {
     .then(data=>setReview(data))
     return (
         <div>
-            <h1 className='text-3xl text-center m-8'>Reviews from cutomer</h1>
+            <h1 className='text-3xl text-center m-4'>Reviews from cutomer</h1>
              <div className='grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3'>
             
             {
+               
                 reviews.map(review => 
                     <div class="card w-96 bg-base-100 shadow-xl">
                     <div class="card-body">

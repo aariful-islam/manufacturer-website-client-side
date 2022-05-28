@@ -10,7 +10,7 @@ const MyOrder = () => {
     const navigate=useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:4000/orders?email=${user.email}`, {
+            fetch(`https://floating-basin-04314.herokuapp.com/orders?email=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accesstoken')}`

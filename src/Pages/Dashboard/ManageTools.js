@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const ManageTools = () => {
     const [tools, setTools] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:4000/tools")
+        fetch("https://floating-basin-04314.herokuapp.com/tools")
             .then(res => res.json())
             .then(data => setTools(data))
     }, [])
@@ -15,7 +15,7 @@ const ManageTools = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you want to delete?');
         if (proceed) {
-            const url = `http://localhost:4000/tools/${id}`;
+            const url = `https://floating-basin-04314.herokuapp.com/tools/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -18,7 +18,7 @@ const Purchage = () => {
 
 
     const { purchageId } = useParams();
-    const { data: tools, isLoading, refetch } = useQuery('tool', () => fetch(`http://localhost:4000/tools/${purchageId}`, {
+    const { data: tools, isLoading, refetch } = useQuery('tool', () => fetch(`https://floating-basin-04314.herokuapp.com/tools/${purchageId}`, {
         method: 'GET',
         headers: {
             authorization: `Barer ${localStorage.getItem('accessToken')}`
@@ -64,7 +64,7 @@ const Purchage = () => {
     }
     const finalSubmit = event => {
 
-        fetch(`http://localhost:4000/tools/${purchageId}`, {
+        fetch(`https://floating-basin-04314.herokuapp.com/tools/${purchageId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -88,7 +88,7 @@ const Purchage = () => {
 
 
 
-        fetch('http://localhost:4000/orders', {
+        fetch('https://floating-basin-04314.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

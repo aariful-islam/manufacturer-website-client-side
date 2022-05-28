@@ -34,7 +34,7 @@ const Addtools = () => {
                    
 
                     
-                    fetch('http://localhost:4000/tools', {
+                    fetch('https://floating-basin-04314.herokuapp.com/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

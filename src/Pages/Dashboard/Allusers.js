@@ -4,7 +4,7 @@ import UserRow from './UserRow';
 const Allusers = () => {
     const [users,setusers]= useState([])
     useEffect( ()=>{
-        fetch('http://localhost:4000/user',{
+        fetch('https://floating-basin-04314.herokuapp.com/user',{
             method:'GET',
             headers:{
                 authorization : `Bearer ${localStorage.getItem('accesstoken')}`

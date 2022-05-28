@@ -11,7 +11,7 @@ const Review = () => {
         const description = e.target.description.value;
         console.log(rating, description)
         const review = { rating, description }
-        fetch('http://localhost:4000/review', {
+        fetch('https://floating-basin-04314.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

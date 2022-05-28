@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const ManageOrders = () => {
     const [orders,setOrders]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:4000/orders')
+        fetch('https://floating-basin-04314.herokuapp.com/orders')
         .then(res=>res.json())
         .then(data=>setOrders(data))
     },[])

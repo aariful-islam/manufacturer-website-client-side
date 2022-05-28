@@ -1,51 +1,51 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrder = () => {
     const [orders, setOrders] = useState([])
     const [user] = useAuthState(auth)
+    const navigate=useNavigate();
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:4000/orders?email=${user.email}`,{
-                method:'GET',
-                headers:{
-                    'authorization':`Bearer ${localStorage.getItem('accesstoken')}`
+            fetch(`http://localhost:4000/orders?email=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accesstoken')}`
                 }
             })
                 .then(res => {
-                    console.log('res',res)
-                    if(res.status===401 ){
+                    console.log('res', res)
+                    if (res.status === 401 || res.status === 403) {
+                        signOut(auth);
+                        localStorage.removeItem('accesstoken');
+                        navigate('/home')
+                    }
 
-                    }
-                    else if(res.status===403){
-                        
-                    }
-                   return res.json()})
+                    return res.json()
+                })
                 .then(data => {
-                    setOrders(data)})
+                    setOrders(data)
+                })
 
         }
 
     }, [user])
 
-    
+
     return (
         <div>
-            
-            <p>
-                {orders.length}
-            </p>
-            
-           
+
             <div class="overflow-x-auto">
                 <table class="table w-full">
-                    
-                    
+
+
                     <thead>
                         <tr>
-                            <th></th>
                             
+
                             <th>Tools</th>
                             <th>Total Price</th>
                             <th>quantity</th>
@@ -55,8 +55,8 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map(order=> <tr>
-                                <td></td>
+                            orders.map(order => <tr>
+                                
                                 <td>{order.email}</td>
                                 <td>{order.quantity}</td>
                                 <td>{order.totalPrice}</td>
@@ -64,8 +64,8 @@ const MyOrder = () => {
                                 <td><button className='btn btn-primary'>delete</button></td>
                             </tr>)
                         }
-                        
-                       
+
+
 
                     </tbody>
                 </table>

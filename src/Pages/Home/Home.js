@@ -3,6 +3,7 @@ import Tools from '../Tools/Tools';
 import Authentic from './Authentic';
 import Banner from './Banner';
 import Service from './Service';
+import ShowReview from './ShowReview';
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
             <Tools></Tools>
             <Authentic></Authentic>
             <Service></Service>
+            <ShowReview></ShowReview>
             
 
 

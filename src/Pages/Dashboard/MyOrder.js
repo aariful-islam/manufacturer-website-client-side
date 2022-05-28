@@ -14,13 +14,19 @@ const MyOrder = () => {
         }
 
     }, [user])
+
+    
     return (
         <div>
-            <p>{orders.length}</p>
+            
+            <p>
+                {orders.length}
+            </p>
             
            
             <div class="overflow-x-auto">
                 <table class="table w-full">
+                    
                     
                     <thead>
                         <tr>
@@ -35,9 +41,10 @@ const MyOrder = () => {
                         {
                             orders.map(order=> <tr>
                                 <td></td>
-                                <td>{orders.name}</td>
+                                <td>{orders.email}</td>
                                 <td>ghsg</td>
                                 <td>Blue</td>
+                                <td><button>delete</button></td>
                             </tr>)
                         }
                         

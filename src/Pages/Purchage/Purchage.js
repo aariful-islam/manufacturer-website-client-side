@@ -122,7 +122,7 @@ const Purchage = () => {
             <h2 className="text-primary  font-bold text-5xl my-2 text-center uppercase">Purchase the toolss</h2>
             <div className="border-2 shadow-green-50 rounded-2xl p-5">
                 <div className=" gap-10  mb-28">
-                    <div className="w-1/2 mx-auto p-10 border-2 shadow-green-50 rounded-2xl order-1 mb-5">
+                    <div className="w-1/2 mx-auto p-10  order-1 mb-5">
                         <img className="mx-auto hover:rotate-2 w-1/2" src={tools?.img} alt="" />
                         <h3 className="text-2xl font-bold text-left ">{tools?.name}</h3>
                         <p className="text-black text-justify">{tools?.description}</p>
@@ -136,7 +136,7 @@ const Purchage = () => {
                                 </p>
                                 :
 
-                                <p className="text-center  bg-accent text-white font-bold py-2 w-full rounded focus:outline-none focus:shadow-outline" >
+                                <p className="text-center  bg-primary text-white font-bold py-2 w-full rounded focus:outline-none focus:shadow-outline" >
                                     Available
                                 </p>
                         }
@@ -150,8 +150,8 @@ const Purchage = () => {
                             <input className='mb-2 border-2  shadow-green-50 p-2' value={user.phoneNUmber} placeholder="Mobile Number" type="number"  {...register("phoneNumber")} />
                             <input className='mb-2 border-2  shadow-green-50 p-2' placeholder="Address" type="text" {...register("address")} />
 
-                            <p className=' text-error p-2 font-bold text-center'> Minimum Order Quantity: {tools.minorder}  </p>
-                            <p className='mb-2 text-error p-2 font-bold text-center'> Unit Price: {tools.price}  </p>
+                            <p className='  p-2 font-bold text-center'> Minimum Order Quantity: {tools.minorder}  </p>
+                            <p className='mb-2  p-2 font-bold text-center'> Unit Price: {tools.price}  </p>
 
 
 
@@ -182,15 +182,15 @@ const Purchage = () => {
                                 {
                                     errors.quantity ? <input
                                         type="submit"
-                                        className="btn btn-secondary text-white font-bold uppercase"
+                                        className="btn btn-primary text-white font-bold uppercase"
                                         disabled
-                                        value="Add"
+                                        value="Add Tools"
                                     />
                                         :
                                         <input
                                             type="submit"
-                                            className="btn btn-secondary text-white font-bold uppercase w-1/2"
-                                            value="Add"
+                                            className="btn btn-primary text-white font-bold uppercase w-1/2"
+                                            value="Add Tools"
                                         />
                                 }
                                 <div>
@@ -203,6 +203,7 @@ const Purchage = () => {
                                         onClick={finalSubmit}
                                         disabled
                                         value="purchase"
+                                        
                                     />
                                         :
                                         <input

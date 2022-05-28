@@ -13,8 +13,17 @@ const MyOrder = () => {
                     'authorization':`Bearer ${localStorage.getItem('accesstoken')}`
                 }
             })
-                .then(res => res.json())
-                .then(data => setOrders(data))
+                .then(res => {
+                    console.log('res',res)
+                    if(res.status===401 ){
+
+                    }
+                    else if(res.status===403){
+                        
+                    }
+                   return res.json()})
+                .then(data => {
+                    setOrders(data)})
 
         }
 

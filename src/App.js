@@ -5,6 +5,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import Addtools from './Pages/Dashboard/Addtools';
 import Allusers from './Pages/Dashboard/Allusers';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
 import MyOrder from './Pages/Dashboard/MyOrder';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Review from './Pages/Dashboard/Review';
@@ -46,6 +47,7 @@ function App() {
            <Route path='/dashboard/review' element={<Review></Review>}></Route>
            <Route path='/dashboard/addtools' element={<Addtools></Addtools>}></Route>
            <Route path='/dashboard/alluser' element={<Allusers></Allusers>}></Route>
+           <Route path='/dashboard/manageorders' element={<ManageOrders></ManageOrders>}></Route>
         </Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>

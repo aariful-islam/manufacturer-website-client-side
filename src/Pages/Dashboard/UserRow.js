@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserRow = ({ user }) => {
-    const {email}=user;
+    const {email,role}=user;
     const makeAdmin = () => {
         
 
@@ -13,6 +13,7 @@ const UserRow = ({ user }) => {
         })
             .then(res => res.json())
             .then(data => {
+                
                 console.log(data);
             })
 
@@ -20,12 +21,12 @@ const UserRow = ({ user }) => {
     return (
         <div>
            
-            <tr>
-
-                <td className='w-1/2'>{email}</td>
-
-                <td><button onClick={makeAdmin} className='btn btn-primary'>Make Admin</button></td>
-            </tr>
+           <tr>
+            <th>1</th>
+            <td>{email}</td>
+            <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td>
+            <td><button class="btn btn-xs">Remove User</button></td>
+        </tr>
 
         </div>
     );

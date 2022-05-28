@@ -13,40 +13,21 @@ const Allusers = () => {
         .then(res=>res.json())
         .then(data=>setusers(data))
     },[])
-    // const makeAdmin=()=>{
-    //     fetch(`http://localhost:4000/user/admin/${users.email}`,{
-    //         method:'PUT',
-    //         headers:{
-    //             authorization : `Bearer ${localStorage.getItem('accesstoken')}`
-    //         }
-    //     })
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         console.log(users.email);
-    //     })
-        
-    // }
+    
     return (
         <div>
-          
+            <h2 className="text-2xl">All Users: {users.length}</h2>
             <div class="overflow-x-auto">
                 <table class="table w-full">
-
-
                    
                     <tbody>
-                        {
-                            users.map(user => <tr>
-                                
-                                {/* <td>{user.email}</td>
-                                
-                                <td><button onClick={makeAdmin} className='btn btn-primary'>Make Admin</button></td> */}
-                            <UserRow user={user}></UserRow>
-                            </tr>)
-                        }
-
-
-
+                       {
+                           users.map(user=><UserRow
+                           key={user._id}
+                           user={user}
+                           
+                           ></UserRow>)
+                       }
                     </tbody>
                 </table>
             </div>
